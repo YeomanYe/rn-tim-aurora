@@ -1,0 +1,3 @@
+rootProject.name = 'timAurora'
+
+include ':app'
