@@ -8,8 +8,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "aurora-imui-react-native": "^0.10.8",
     "react": "16.4.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-native-fs": "^2.10.14",
+    "react-navigation": "^2.7.0"
   },
   "devDependencies": {
     "babel-jest": "23.4.0",
