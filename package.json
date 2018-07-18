@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "clean-android": "cd android && gradlew clean && cd ..",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.4.1",
-    "react-native": "0.56.0"
+    "react-native": "0.55.4"
   },
   "devDependencies": {
     "babel-jest": "23.4.0",
-    "babel-preset-react-native": "5",
+    "babel-preset-react-native": "2.1.0",
     "jest": "23.4.1",
     "react-test-renderer": "16.4.1"
   },
