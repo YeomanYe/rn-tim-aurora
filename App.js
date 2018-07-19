@@ -21,6 +21,8 @@ var RNFS = require('react-native-fs')
 
 var ReactNative = require('react-native')
 import IMUI from 'aurora-imui-react-native'
+import TIM from './js/TIM';
+TIM.initSDK();
 var InputView = IMUI.ChatInput
 var MessageListView = IMUI.MessageList
 const AuroraIController = IMUI.AuroraIMUIController
@@ -81,7 +83,7 @@ export default class TestRNIMUI extends Component {
       isAllowPullToRefresh: true,
       navigationBar: {},
     }
-    
+
 
     this.updateLayout = this.updateLayout.bind(this);
     this.onMsgClick = this.onMsgClick.bind(this);
@@ -104,7 +106,7 @@ export default class TestRNIMUI extends Component {
   messageListDidLoadEvent() {
     this.getHistoryMessage()
   }
-  
+
   getHistoryMessage() {
     var messages = []
     for (var i = 0; i < 10; i++) {
@@ -219,7 +221,7 @@ export default class TestRNIMUI extends Component {
   }
 
   /**
-   * Android need this event to invoke onSizeChanged 
+   * Android need this event to invoke onSizeChanged
    */
   onTouchEditText = () => {
     this.refs["ChatInput"].showMenu(false)
@@ -351,14 +353,14 @@ export default class TestRNIMUI extends Component {
 
   onSendGalleryFiles = (mediaFiles) => {
     /**
-     * WARN: This callback will return original image, 
+     * WARN: This callback will return original image,
      * if insert it directly will high memory usage and blocking UI。
      * You should crop the picture before insert to messageList。
-     * 
+     *
      * WARN: 这里返回的是原图，直接插入大会话列表会很大且耗内存.
      * 应该做裁剪操作后再插入到 messageListView 中，
      * 一般的 IM SDK 会提供裁剪操作，或者开发者手动进行裁剪。
-     * 
+     *
      * 代码用例不做裁剪操作。
      */
     Alert.alert('fas', JSON.stringify(mediaFiles))
@@ -436,7 +438,7 @@ export default class TestRNIMUI extends Component {
         inputViewLayout: { flex: 1, width: window.width, height: window.height },
         navigationBar: { height: 0 }
       })
-    } 
+    }
   }
 
   render() {

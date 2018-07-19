@@ -8,6 +8,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.timaurora.tim.TIMPackage;
+
 import cn.jiguang.imui.messagelist.ReactIMUIPackage;
 
 import java.util.Arrays;
@@ -26,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
               new ReactIMUIPackage(),
+            new TIMPackage(),
             new RNFSPackage()
       );
     }

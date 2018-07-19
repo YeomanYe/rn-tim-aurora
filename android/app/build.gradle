@@ -106,6 +106,9 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
     }
+    defaultConfig {
+        multiDexEnabled true
+    }
     splits {
         abi {
             reset()
@@ -113,6 +116,9 @@ android {
             universalApk false  // If true, also generate a universal APK
             include "armeabi-v7a", "x86"
         }
+    }
+    sourceSets.main {
+        jni.srcDirs = ['libs']
     }
     buildTypes {
         release {
