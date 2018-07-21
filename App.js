@@ -23,6 +23,7 @@ var ReactNative = require('react-native')
 import IMUI from 'aurora-imui-react-native'
 import TIM from './js/TIM';
 TIM.initSDK();
+TIM.loginTest1();
 var InputView = IMUI.ChatInput
 var MessageListView = IMUI.MessageList
 const AuroraIController = IMUI.AuroraIMUIController

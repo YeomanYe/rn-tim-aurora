@@ -1,14 +1,9 @@
 package com.timaurora.tim;
 
-import android.os.Environment;
-import android.util.Log;
-
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.tencent.TIMCallBack;
-import com.tencent.TIMLogLevel;
-import com.tencent.TIMManager;
 
 
 public class TIMModule extends ReactContextBaseJavaModule {
@@ -24,28 +19,18 @@ public class TIMModule extends ReactContextBaseJavaModule {
     }
     @ReactMethod
     public void initSDK(){
-        Log.d(TAG,"initSDK");
-        //初始化 SDK 基本配置
-        TIMManager tim = TIMManager.getInstance();
-        tim.setLogLevel(TIMLogLevel.DEBUG);
-        tim.disableCrashReport();
-        tim.initLogSettings(true,Environment.getExternalStorageDirectory().getPath()+"/tim_log/");
-
-        //初始化 SDK
-        tim.init(this.rContext);
+        Config.initSdk(this.rContext);
     }
     @ReactMethod
-    public void login(String identifier,String userSig){
-        TIMManager.getInstance().login(identifier, userSig, new TIMCallBack() {
-            @Override
-            public void onError(int code, String desc) {
-                Log.d(TAG, "login failed. code: " + code + " errmsg: " + desc);
-            }
-
-            @Override
-            public void onSuccess() {
-                Log.d(TAG, "login succ");
-            }
-        });
+    public void login(String identifier,String userSig,Promise promise){
+        Auth.login(identifier,userSig,promise);
+    }
+    @ReactMethod
+    public void loginTest1(Promise promise){
+        login("test10010","eJx1kEFPwjAUgO-7FU2vGra2zIGJB0CRySBZWFW8NAvtRjcHzfogLIb-7jJN3MV3-b687*V9OQghnESbQbrbHU8HENAYhdE9wsGY4ts-bIyWIgXBatlhMvTaIT5jPUtdjK6VSDNQdWdRf0xbradoqQ6gM-0rgLJA2j19xcpSdL3-Q1bnHVw98VkYPxZuCQu132TRM-M*6BKmL-vF5IZW9Xpit0bDZ8NHNpNhFIf5yjXJmXiX-I1V823BinlZFiaO8pTzhtFXf50k8btrTj5-6CVBVz*PaU*hZBjceQF2rs43g2lXtg__",promise);
+    }
+    @ReactMethod
+    public void loinTest2(Promise promise){
+        login("test10011","eJx1kEFrgzAUgO-*ipDzWJtEGx3skK2uFFwdVimegpqoYa2mGteO0f8*cYN52bt*H*97vC8LAADjYH*fFUU7NIabTy0heACQehje-WGtleCZ4aQTE0b2chzkEDKz5FWrTvKsNLKbLOx4eNRmihKyMapUv4KRvUHjHjRTevHOp97-oV5VE3z1k*fty4db0TytwzNpT9HGSS4mXLz1kWQp848yuxyu*ZOHqx0ZmPIZXaAypdE6TNzzdtewodZhULCjWMadG8Rkfdjsa5bbddo*zpJGnX4eM56CkU1XKxdaN*sbaF9XMw__",promise);
     }
 }
