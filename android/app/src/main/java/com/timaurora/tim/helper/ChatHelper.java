@@ -29,6 +29,7 @@ import java.util.List;
 
 public class ChatHelper {
     private static TIMConversation conversation;
+    public static TIMMessage lastMsg;
     private static String tag = ChatHelper.class.getSimpleName();
     private static void createConversation(TIMConversationType type,String identifier){
         conversation = TIMManager.getInstance().getConversation(type,identifier);
@@ -43,9 +44,11 @@ public class ChatHelper {
         conversation.sendMessage(msgElem, new TIMValueCb<TIMMessage>(tagName,promise));
     }
     public static void chatWithSingle(String identifier){
+        lastMsg = null;
         createConversation(TIMConversationType.C2C,identifier);
     }
     public static void chatWithGroup(String identifier){
+        lastMsg = null;
         createConversation(TIMConversationType.Group,identifier);
     }
     public static void sendText(String text, Promise promise){
@@ -86,25 +89,10 @@ public class ChatHelper {
         elem.setSnapshot(snapshot);
         sendMsg(elem,"sendVideo",promise);
     }
-    public static void getLocalMsg(){
+    public static void getHistoryMsg(Integer count,Promise promise){
         //获取此会话的消息
-        conversation.getLocalMessage(10, //获取此会话最近的 10 条消息
-                null, //不指定从哪条消息开始获取 - 等同于从最新的消息开始往前
-                new TIMValueCallBack<List<TIMMessage>>() {//回调接口
-                    @Override
-                    public void onError(int code, String desc) {//获取消息失败
-                        //接口返回了错误码 code 和错误描述 desc，可用于定位请求失败原因
-                        //错误码 code 含义请参见错误码表
-                        Log.d(tag, "get message failed. code: " + code + " errmsg: " + desc);
-                    }
-                    @Override
-                    public void onSuccess(List<TIMMessage> msgs) {//获取消息成功
-                        //遍历取得的消息
-                        for(TIMMessage msg : msgs) {
-                            //可以通过timestamp()获得消息的时间戳, isSelf()是否为自己发送的消息
-                            Log.e(tag, "get msg: " + msg.timestamp() + " self: " + msg.isSelf() + " seq: " + msg.msg.seq());
-                        }
-                    }
-                });
+        conversation.getMessage(count, //获取此会话最近的 10 条消息
+                lastMsg, //不指定从哪条消息开始获取 - 等同于从最新的消息开始往前
+                new TIMValueCb("getMessage",promise));
     }
 }

@@ -15,6 +15,7 @@ import com.tencent.TIMTextElem;
 import com.tencent.TIMValueCallBack;
 import com.tencent.TIMVideoElem;
 import com.timaurora.tim.PromiseHelper;
+import com.timaurora.tim.helper.ChatHelper;
 
 import java.util.List;
 
@@ -35,8 +36,21 @@ public class TIMValueCb<T> extends BaseCb implements TIMValueCallBack<T> {
         Boolean isSelf = t.isSelf();
         map.putDouble("timestamp",timestamp);
         map.putString("msgId",msgId);
-        map.putBoolean("isSelf",isSelf);
+        map.putString("status","send_succeed");
+        WritableMap userMap = Arguments.createMap();
+        if(!isSelf) {
+            map.putBoolean("isOutgoing",false);
+            userMap.putString("userId",t.getSender());
+        }
+        else {
+            map.putBoolean("isOutgoing",true);
+            userMap.putString("userId","");
+        }
+        userMap.putString("avatarPath","images");
+        userMap.putString("displayName","");
+        map.putMap("fromUser",userMap);
         TIMElem timElem = t.getElement(0);
+
         String msgType = "invalid";
         switch (timElem.getType()){
             case Text:
@@ -71,10 +85,12 @@ public class TIMValueCb<T> extends BaseCb implements TIMValueCallBack<T> {
             TIMMessage timMsg = (TIMMessage)t;
             map.putMap("timMsg",resolveTIMMsg(timMsg));
         }else if(t instanceof List){
+            //此处获取消息记录
             List<TIMMessage> timMsgs = (List)t;
             WritableArray array = Arguments.createArray();
             for(TIMMessage timMsg:timMsgs){
                 array.pushMap(resolveTIMMsg(timMsg));
+                ChatHelper.lastMsg = timMsg;
             }
             map.putArray("timMsg",array);
         }

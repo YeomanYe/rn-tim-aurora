@@ -70,17 +70,20 @@ export default class TestRNIMUI extends Component {
         if (Platform.OS === "android") {
             this.refs["ChatInput"].setMenuContainerHeight(316)
         }
-        this.resetMenu()
+        this.resetMenu();
         AuroraIController.addMessageListDidLoadListener(this.messageListDidLoadEvent);
     }
 
 
     messageListDidLoadEvent() {
-        // this.getHistoryMessage()
+        this.getHistoryMessage();
     }
 
-    getHistoryMessage() {
-
+    async getHistoryMessage() {
+        let resObj = await TIM.getHistory(10);
+        console.log(resObj);
+        if(resObj.code === 200)
+            AuroraIController.appendMessages(resObj.timMsg.reverse());
     }
 
     onInputViewSizeChange = (size) => {
@@ -166,27 +169,6 @@ export default class TestRNIMUI extends Component {
     }
 
     onPullToRefresh = () => {
-        /*console.log("on pull to refresh")
-        var messages = []
-        for (var i = 0; i < 14; i++) {
-            var message = constructNormalMessage()
-            // if (index%2 == 0) {
-            message.msgType = "text"
-            message.text = "" + i
-            // }
-
-            if (i % 3 == 0) {
-                message.msgType = "video"
-                message.text = "" + i
-                message.mediaPath = "/storage/emulated/0/ScreenRecorder/screenrecorder.20180323101705.mp4"
-                message.duration = 12
-            }
-            messages.push(message)
-        }
-        AuroraIController.insertMessagesToTop(messages)
-        if (Platform.OS === 'android') {
-            this.refs["MessageList"].refreshComplete()
-        }*/
         if (Platform.OS === 'android') {
             this.refs["MessageList"].refreshComplete()
         }
@@ -382,7 +364,8 @@ export default class TestRNIMUI extends Component {
                                 }
                                 user.displayName = "0001"
                                 user.avatarPath = "ironman"
-                                message.fromUser = user
+                                console.log(message);
+                                // message.fromUser = user
                                 AuroraIController.appendMessages([message]);
                             }
                         }}>

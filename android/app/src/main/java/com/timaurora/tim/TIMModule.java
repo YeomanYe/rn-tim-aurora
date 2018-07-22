@@ -49,6 +49,10 @@ public class TIMModule extends ReactContextBaseJavaModule {
         ChatHelper.sendSound(path,duration,promise);
     }
     @ReactMethod
+    public void getHistory(Integer count,Promise promise){
+        ChatHelper.getHistoryMsg(count,promise);
+    }
+    @ReactMethod
     public void sendVideo(String path,Promise promise){
         ChatHelper.sendVideo(path,promise);
     }
