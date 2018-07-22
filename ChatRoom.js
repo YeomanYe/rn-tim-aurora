@@ -21,7 +21,7 @@ function constructNormalMessage() {
     var message = {}
     message.msgId = themsgid.toString()
     themsgid += 1
-    message.status = "send_succeed"
+    message.status = "send_going"
     message.isOutgoing = true
     var date = new Date()
     message.timeString = date.getHours() + ":" + date.getMinutes()
@@ -192,14 +192,23 @@ export default class TestRNIMUI extends Component {
         }
     }
 
-    onSendText = (text) => {
-        var message = constructNormalMessage()
+    sendMsg(msg,resObj){
+        AuroraIController.appendMessages([msg])
+        if(resObj.code===200) {
+            msg = Object.assign({},msg);
+            msg.status = 'send_succeed';
+            AuroraIController.updateMessage(msg);
+        }
+    }
 
+    onSendText = async(text) => {
+        var message = constructNormalMessage();
         message.msgType = 'text';
         message.text = text;
         console.log(text);
-
-        AuroraIController.appendMessages([message])
+        let resObj = await TIM.sendText(text);
+        console.log('text resObj',resObj);
+        this.sendMsg(message,resObj);
     }
 
     onTakePicture = (media) => {
@@ -218,12 +227,14 @@ export default class TestRNIMUI extends Component {
         console.log("on start record voice")
     }
 
-    onFinishRecordVoice = (mediaPath, duration) => {
+    onFinishRecordVoice = async (mediaPath, duration) => {
         var message = constructNormalMessage()
-        message.msgType = "voice"
-        message.mediaPath = mediaPath
-        message.timeString = "safsdfa"
-        message.duration = duration
+        message.msgType = 'voice';
+        message.mediaPath = mediaPath;
+        message.timeString = 'safsdfa';
+        message.duration = duration;
+        console.log(mediaPath,duration);
+        // let resObj = await TIM.sendSound(mediaPath,duration);
         AuroraIController.appendMessages([message])
         console.log("on finish record voice")
     }

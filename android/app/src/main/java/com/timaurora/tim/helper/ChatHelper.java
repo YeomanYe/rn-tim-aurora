@@ -15,6 +15,7 @@ import com.tencent.TIMMessage;
 import com.tencent.TIMSnapshot;
 import com.tencent.TIMSoundElem;
 import com.tencent.TIMTextElem;
+import com.tencent.TIMValueCallBack;
 import com.tencent.TIMVideo;
 import com.tencent.TIMVideoElem;
 import com.timaurora.tim.PromiseHelper;
@@ -24,6 +25,7 @@ import com.timaurora.tim.util.MediaUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class ChatHelper {
     private static TIMConversation conversation;
@@ -83,5 +85,26 @@ public class ChatHelper {
         snapshot.setWidth(thumb.getWidth());
         elem.setSnapshot(snapshot);
         sendMsg(elem,"sendVideo",promise);
+    }
+    public static void getLocalMsg(){
+        //获取此会话的消息
+        conversation.getLocalMessage(10, //获取此会话最近的 10 条消息
+                null, //不指定从哪条消息开始获取 - 等同于从最新的消息开始往前
+                new TIMValueCallBack<List<TIMMessage>>() {//回调接口
+                    @Override
+                    public void onError(int code, String desc) {//获取消息失败
+                        //接口返回了错误码 code 和错误描述 desc，可用于定位请求失败原因
+                        //错误码 code 含义请参见错误码表
+                        Log.d(tag, "get message failed. code: " + code + " errmsg: " + desc);
+                    }
+                    @Override
+                    public void onSuccess(List<TIMMessage> msgs) {//获取消息成功
+                        //遍历取得的消息
+                        for(TIMMessage msg : msgs) {
+                            //可以通过timestamp()获得消息的时间戳, isSelf()是否为自己发送的消息
+                            Log.e(tag, "get msg: " + msg.timestamp() + " self: " + msg.isSelf() + " seq: " + msg.msg.seq());
+                        }
+                    }
+                });
     }
 }

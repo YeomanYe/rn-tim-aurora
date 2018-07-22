@@ -8,10 +8,12 @@ export default class Test extends Component {
     }
     async loginTest10010(){
         await TIM.loginTest10010();
+        await TIM.chatWithSingle('test10011');
         this.props.navigation.navigate('ChatRoom');
     }
     async loginTest10011(){
         await TIM.loginTest10011();
+        await TIM.chatWithSingle('test10010');
         this.props.navigation.navigate('ChatRoom');
     }
     render() {
