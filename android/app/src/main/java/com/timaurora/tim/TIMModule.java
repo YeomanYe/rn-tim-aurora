@@ -4,6 +4,9 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.timaurora.tim.helper.AuthHelper;
+import com.timaurora.tim.helper.ChatHelper;
+import com.timaurora.tim.helper.ConfigHelper;
 
 
 public class TIMModule extends ReactContextBaseJavaModule {
@@ -19,11 +22,35 @@ public class TIMModule extends ReactContextBaseJavaModule {
     }
     @ReactMethod
     public void initSDK(){
-        Config.initSdk(this.rContext);
+        ConfigHelper.initSdk(this.rContext);
     }
     @ReactMethod
     public void login(String identifier,String userSig,Promise promise){
-        Auth.login(identifier,userSig,promise);
+        AuthHelper.login(identifier,userSig,promise);
+    }
+    @ReactMethod
+    public void logout(Promise promise){
+        AuthHelper.logout(promise);
+    }
+    @ReactMethod
+    public void chatWithSingle(String identifier){
+        ChatHelper.chatWithSingle(identifier);
+    }
+    @ReactMethod
+    public void sendText(String text,Promise promise){
+        ChatHelper.sendText(text,promise);
+    }
+    @ReactMethod
+    public void sendImg(String path,Promise promise){
+        ChatHelper.sendImg(path,promise);
+    }
+    @ReactMethod
+    public void sendSound(String path,Integer duration,Promise promise){
+        ChatHelper.sendSound(path,duration,promise);
+    }
+    @ReactMethod
+    public void sendVideo(String path,Promise promise){
+        ChatHelper.sendVideo(path,promise);
     }
     @ReactMethod
     public void loginTest1(Promise promise){

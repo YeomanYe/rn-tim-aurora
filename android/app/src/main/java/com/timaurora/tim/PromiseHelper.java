@@ -4,10 +4,13 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableMap;
 
 public class PromiseHelper {
-    public static WritableMap createResolve(String msg, int code){
+    public static WritableMap createSucResolve(String msg){
         WritableMap map = Arguments.createMap();
         map.putString("msg",msg);
-        map.putInt("code",code);
+        map.putInt("code",200);
         return map;
+    }
+    public static Throwable createErrReject(String msg){
+        return new Throwable(msg);
     }
 }

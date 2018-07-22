@@ -22,8 +22,6 @@ var RNFS = require('react-native-fs')
 var ReactNative = require('react-native')
 import IMUI from 'aurora-imui-react-native'
 import TIM from './js/TIM';
-TIM.initSDK();
-TIM.loginTest1();
 var InputView = IMUI.ChatInput
 var MessageListView = IMUI.MessageList
 const AuroraIController = IMUI.AuroraIMUIController
@@ -35,6 +33,12 @@ var themsgid = 1
 var photoPathArr = [];
 var msgIdArr = [];
 
+async function apiTest() {
+    TIM.initSDK();
+    await TIM.loginTest1();
+    TIM.sendText('sendtext');
+}
+apiTest();
 function constructNormalMessage() {
 
   var message = {}
@@ -301,10 +305,10 @@ export default class TestRNIMUI extends Component {
 
   onSendText = (text) => {
     var message = constructNormalMessage()
-    var evenmessage = constructNormalMessage()
 
     message.msgType = 'text'
     message.text = text
+      console.log(text);
 
     AuroraIController.appendMessages([message])
   }

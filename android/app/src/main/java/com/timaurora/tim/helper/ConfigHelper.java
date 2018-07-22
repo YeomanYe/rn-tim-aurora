@@ -1,4 +1,4 @@
-package com.timaurora.tim;
+package com.timaurora.tim.helper;
 
 import android.content.Context;
 import android.os.Environment;
@@ -7,9 +7,9 @@ import android.util.Log;
 import com.tencent.TIMLogLevel;
 import com.tencent.TIMManager;
 
-public class Config {
-    private static String tag = Config.class.getSimpleName();
-    static void initSdk(Context context){
+public class ConfigHelper {
+    private static String tag = ConfigHelper.class.getSimpleName();
+    public static void initSdk(Context context){
         Log.d(tag,"initSdk");
         //初始化 SDK 基本配置
         TIMManager tim = TIMManager.getInstance();
