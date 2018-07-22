@@ -31,14 +31,14 @@ public class ChatHelper {
     private static void createConversation(TIMConversationType type,String identifier){
         conversation = TIMManager.getInstance().getConversation(type,identifier);
     }
-    private static TIMMessage sendMsg(TIMElem elem,String tagName, Promise promise){
+    private static void sendMsg(TIMElem elem,String tagName, Promise promise){
         TIMMessage msgElem = new TIMMessage();
-        if(msgElem.addElement(elem)==0) return msgElem;
-        String msg = tagName + " addElement failed";
-        Log.d(tag, msg);
-        promise.reject(PromiseHelper.createErrReject(msg));
+        if(msgElem.addElement(elem)!=0){
+            String msg = tagName + " addElement failed";
+            Log.d(tag, msg);
+            promise.reject(PromiseHelper.createErrReject(msg));
+        }
         conversation.sendMessage(msgElem, new TIMValueCb<TIMMessage>(tagName,promise));
-        return null;
     }
     public static void chatWithSingle(String identifier){
         createConversation(TIMConversationType.C2C,identifier);

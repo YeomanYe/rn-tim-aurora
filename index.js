@@ -1,12 +1,16 @@
 import { AppRegistry } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import ChatScreen from './App';
+import Entrance from './App';
+import ChatRoom from './ChatRoom';
 import BrowserPhotoScreen from './Image_browser';
 import {name as appname} from './app.json';
 
 export default App = StackNavigator({
     Home: {
-        screen: ChatScreen
+        screen: Entrance
+    },
+    ChatRoom:{
+      screen:ChatRoom
     },
     BrowserPhoto: {
         screen: BrowserPhotoScreen
