@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {FlatList, Linking, Text, TouchableOpacity, View,} from 'react-native';
 import TIM from './js/TIM';
 
+
 TIM.initSDK();
 export default class Test extends Component {
     componentDidMount() {
