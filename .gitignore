@@ -17,6 +17,7 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 DerivedData
+ios/frameworks/
 *.hmap
 *.ipa
 *.xcuserstate

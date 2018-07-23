@@ -36,6 +36,12 @@
 		2DCD954D1E0B4F2C00145EB5 /* timAuroraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* timAuroraTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		30E00142D73C4D94A41DB99C /* libAuroraIMUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC398C330B4A6B95C30ECA /* libAuroraIMUI.a */; };
+		4663F69021057A3000BEE115 /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68A21057A2F00BEE115 /* IMCore.framework */; };
+		4663F69121057A3000BEE115 /* QALHttpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68B21057A2F00BEE115 /* QALHttpSDK.framework */; };
+		4663F69221057A3000BEE115 /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68C21057A3000BEE115 /* TLSSDK.framework */; };
+		4663F69321057A3000BEE115 /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68D21057A3000BEE115 /* ImSDK.framework */; };
+		4663F69421057A3000BEE115 /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68E21057A3000BEE115 /* QALSDK.framework */; };
+		4663F69521057A3000BEE115 /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68F21057A3000BEE115 /* IMSDKBugly.framework */; };
 		466BAAE72101E2E9004F4392 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAE62101E2E9004F4392 /* libc++.tbd */; };
 		466BAAE92101E2F5004F4392 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAE82101E2F5004F4392 /* libstdc++.6.tbd */; };
 		466BAAF82101E581004F4392 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAEA2101E30D004F4392 /* libsqlite3.tbd */; };
@@ -392,6 +398,12 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3480D3B097AD4FA786F26D21 /* libRNFS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFS.a; sourceTree = "<group>"; };
 		3A1FA31B09884FB789E1AAD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4663F68A21057A2F00BEE115 /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMCore.framework; path = frameworks/IMCore.framework; sourceTree = "<group>"; };
+		4663F68B21057A2F00BEE115 /* QALHttpSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QALHttpSDK.framework; path = frameworks/QALHttpSDK.framework; sourceTree = "<group>"; };
+		4663F68C21057A3000BEE115 /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLSSDK.framework; path = frameworks/TLSSDK.framework; sourceTree = "<group>"; };
+		4663F68D21057A3000BEE115 /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImSDK.framework; path = frameworks/ImSDK.framework; sourceTree = "<group>"; };
+		4663F68E21057A3000BEE115 /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QALSDK.framework; path = frameworks/QALSDK.framework; sourceTree = "<group>"; };
+		4663F68F21057A3000BEE115 /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMSDKBugly.framework; path = frameworks/IMSDKBugly.framework; sourceTree = "<group>"; };
 		466BAAE62101E2E9004F4392 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		466BAAE82101E2F5004F4392 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		466BAAEA2101E30D004F4392 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -425,6 +437,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4663F69021057A3000BEE115 /* IMCore.framework in Frameworks */,
+				4663F69121057A3000BEE115 /* QALHttpSDK.framework in Frameworks */,
+				4663F69221057A3000BEE115 /* TLSSDK.framework in Frameworks */,
+				4663F69321057A3000BEE115 /* ImSDK.framework in Frameworks */,
+				4663F69421057A3000BEE115 /* QALSDK.framework in Frameworks */,
+				4663F69521057A3000BEE115 /* IMSDKBugly.framework in Frameworks */,
 				466BAAF82101E581004F4392 /* libsqlite3.tbd in Frameworks */,
 				828BB26527CC4347BB883DBB /* libz.tbd in Frameworks */,
 				466BAAE92101E2F5004F4392 /* libstdc++.6.tbd in Frameworks */,
@@ -601,6 +619,12 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4663F68A21057A2F00BEE115 /* IMCore.framework */,
+				4663F68D21057A3000BEE115 /* ImSDK.framework */,
+				4663F68F21057A3000BEE115 /* IMSDKBugly.framework */,
+				4663F68B21057A2F00BEE115 /* QALHttpSDK.framework */,
+				4663F68E21057A3000BEE115 /* QALSDK.framework */,
+				4663F68C21057A3000BEE115 /* TLSSDK.framework */,
 				466BAAEA2101E30D004F4392 /* libsqlite3.tbd */,
 				466BAAE82101E2F5004F4392 /* libstdc++.6.tbd */,
 				466BAAE62101E2E9004F4392 /* libc++.tbd */,
@@ -1401,6 +1425,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1427,6 +1452,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
