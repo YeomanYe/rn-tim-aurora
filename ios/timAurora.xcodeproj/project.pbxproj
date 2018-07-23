@@ -64,6 +64,8 @@
 		F3233DF6E91C465296D1CC50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5626B624F78C4E6895140D2F /* SystemConfiguration.framework */; };
 		F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEDA74A60F99166CFF0E7 /* TIMModule.m */; };
 		F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EED250736F513B4E8D5E0 /* ConfigHelper.m */; };
+		F67EE59978CFE829CFBF9460 /* TIMCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE660EAD5ADF9C2DD22F8 /* TIMCb.m */; };
+		F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -464,6 +466,10 @@
 		EEC6A8DD78674FBD972F2615 /* RCTAuroraIMUI.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTAuroraIMUI.xcodeproj; path = "../node_modules/aurora-imui-react-native/ReactNative/ios/RCTAuroraIMUI.xcodeproj"; sourceTree = "<group>"; };
 		EFCFB18BB76843CC859E3791 /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F67EE64CF628E17B9949F91C /* ConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHelper.h; sourceTree = "<group>"; };
+		F67EE656FC753491BA021444 /* AuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHelper.h; sourceTree = "<group>"; };
+		F67EE660EAD5ADF9C2DD22F8 /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
+		F67EE6E67E72BC720042A4FB /* TIMCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMCb.h; sourceTree = "<group>"; };
+		F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthHelper.m; sourceTree = "<group>"; };
 		F67EE9EB2A04B0589475B4E5 /* TIMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMModule.h; sourceTree = "<group>"; };
 		F67EED250736F513B4E8D5E0 /* ConfigHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigHelper.m; sourceTree = "<group>"; };
 		F67EEDA74A60F99166CFF0E7 /* TIMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMModule.m; sourceTree = "<group>"; };
@@ -702,6 +708,7 @@
 		4663F7E92105BC0700BEE115 /* RCTIM */ = {
 			isa = PBXGroup;
 			children = (
+				4663F8182105D4EE00BEE115 /* Callback */,
 				4663F7EA2105BC2E00BEE115 /* Helper */,
 				F67EEDA74A60F99166CFF0E7 /* TIMModule.m */,
 				F67EE9EB2A04B0589475B4E5 /* TIMModule.h */,
@@ -714,8 +721,19 @@
 			children = (
 				F67EED250736F513B4E8D5E0 /* ConfigHelper.m */,
 				F67EE64CF628E17B9949F91C /* ConfigHelper.h */,
+				F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */,
+				F67EE656FC753491BA021444 /* AuthHelper.h */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		4663F8182105D4EE00BEE115 /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				F67EE660EAD5ADF9C2DD22F8 /* TIMCb.m */,
+				F67EE6E67E72BC720042A4FB /* TIMCb.h */,
+			);
+			path = Callback;
 			sourceTree = "<group>";
 		};
 		466BAAAD2101E148004F4392 /* Recovered References */ = {
@@ -1410,6 +1428,8 @@
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */,
 				F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */,
+				F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */,
+				F67EE59978CFE829CFBF9460 /* TIMCb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
