@@ -42,6 +42,8 @@
 		4663F69321057A3000BEE115 /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68D21057A3000BEE115 /* ImSDK.framework */; };
 		4663F69421057A3000BEE115 /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68E21057A3000BEE115 /* QALSDK.framework */; };
 		4663F69521057A3000BEE115 /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68F21057A3000BEE115 /* IMSDKBugly.framework */; };
+		4663F77E2105B8E500BEE115 /* RCTAuroraIMUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAE32101E14A004F4392 /* RCTAuroraIMUI.framework */; };
+		4663F77F2105B8E500BEE115 /* RCTAuroraIMUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAE32101E14A004F4392 /* RCTAuroraIMUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		466BAAE72101E2E9004F4392 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAE62101E2E9004F4392 /* libc++.tbd */; };
 		466BAAE92101E2F5004F4392 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAE82101E2F5004F4392 /* libstdc++.6.tbd */; };
 		466BAAF82101E581004F4392 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 466BAAEA2101E30D004F4392 /* libsqlite3.tbd */; };
@@ -52,6 +54,7 @@
 		828BB26527CC4347BB883DBB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FE846686C643C8BC833786 /* libz.tbd */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8B1DBF3AC68B4B7785945D07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0387DEB4FBF147C3BC9E9D43 /* Foundation.framework */; };
+		8BF428820B4E4557B9299753 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E35939DEAC40DFA50ED740 /* libCodePush.a */; };
 		9AC237788B3F4C3FA3A78700 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA5C4C75E8A4E6F89F945E8 /* CFNetwork.framework */; };
 		9F9649E3F6A54EC794C4A885 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCFB18BB76843CC859E3791 /* CoreTelephony.framework */; };
 		A3A6F677372B4E73BE36750D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89556DA8180746C8ABDD261D /* UIKit.framework */; };
@@ -59,6 +62,8 @@
 		CC9CC0C07443428EAD6E34FC /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3480D3B097AD4FA786F26D21 /* libRNFS.a */; };
 		CE779CC2C3A249DDBEFBB4D7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE3076E024B4349A5AD9327 /* CoreFoundation.framework */; };
 		F3233DF6E91C465296D1CC50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5626B624F78C4E6895140D2F /* SystemConfiguration.framework */; };
+		F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEDA74A60F99166CFF0E7 /* TIMModule.m */; };
+		F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EED250736F513B4E8D5E0 /* ConfigHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,6 +305,27 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
+		4663F6D22105854000BEE115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 588B730C57BF408282351EEB /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = CodePush;
+		};
+		4663F6D42105854000BEE115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 588B730C57BF408282351EEB /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F886647B1F4ADB500036D01B;
+			remoteInfo = "CodePush-tvOS";
+		};
+		4663F7AC2105B90100BEE115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C86DF451ADF2C930047B81A;
+			remoteInfo = RCTWebSocket;
+		};
 		466BAAD72101E14A004F4392 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A065214CB05C4BD69FE022DC /* RNFS.xcodeproj */;
@@ -372,6 +398,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4663F7AB2105B8E500BEE115 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4663F77F2105B8E500BEE115 /* RCTAuroraIMUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -409,6 +449,7 @@
 		466BAAEA2101E30D004F4392 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		53402EBB77774E2D8DE08E36 /* RCTAuroraIMUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = RCTAuroraIMUI.framework; path = System/Library/Frameworks/RCTAuroraIMUI.framework; sourceTree = SDKROOT; };
 		5626B624F78C4E6895140D2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		588B730C57BF408282351EEB /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7CA5C4C75E8A4E6F89F945E8 /* CFNetwork.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -422,6 +463,11 @@
 		EACC398C330B4A6B95C30ECA /* libAuroraIMUI.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAuroraIMUI.a; sourceTree = "<group>"; };
 		EEC6A8DD78674FBD972F2615 /* RCTAuroraIMUI.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTAuroraIMUI.xcodeproj; path = "../node_modules/aurora-imui-react-native/ReactNative/ios/RCTAuroraIMUI.xcodeproj"; sourceTree = "<group>"; };
 		EFCFB18BB76843CC859E3791 /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F67EE64CF628E17B9949F91C /* ConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHelper.h; sourceTree = "<group>"; };
+		F67EE9EB2A04B0589475B4E5 /* TIMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMModule.h; sourceTree = "<group>"; };
+		F67EED250736F513B4E8D5E0 /* ConfigHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigHelper.m; sourceTree = "<group>"; };
+		F67EEDA74A60F99166CFF0E7 /* TIMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMModule.m; sourceTree = "<group>"; };
+		F9E35939DEAC40DFA50ED740 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +489,7 @@
 				4663F69321057A3000BEE115 /* ImSDK.framework in Frameworks */,
 				4663F69421057A3000BEE115 /* QALSDK.framework in Frameworks */,
 				4663F69521057A3000BEE115 /* IMSDKBugly.framework in Frameworks */,
+				4663F77E2105B8E500BEE115 /* RCTAuroraIMUI.framework in Frameworks */,
 				466BAAF82101E581004F4392 /* libsqlite3.tbd in Frameworks */,
 				828BB26527CC4347BB883DBB /* libz.tbd in Frameworks */,
 				466BAAE92101E2F5004F4392 /* libstdc++.6.tbd in Frameworks */,
@@ -471,6 +518,7 @@
 				8B1DBF3AC68B4B7785945D07 /* Foundation.framework in Frameworks */,
 				A3A6F677372B4E73BE36750D /* UIKit.framework in Frameworks */,
 				7519E452A03645AF8527DE42 /* CoreGraphics.framework in Frameworks */,
+				8BF428820B4E4557B9299753 /* libCodePush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +630,7 @@
 		13B07FAE1A68108700A75B9A /* timAurora */ = {
 			isa = PBXGroup;
 			children = (
+				4663F7E92105BC0700BEE115 /* RCTIM */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -641,6 +690,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4663F6CE2105854000BEE115 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4663F6D32105854000BEE115 /* libCodePush.a */,
+				4663F6D52105854000BEE115 /* libCodePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4663F7E92105BC0700BEE115 /* RCTIM */ = {
+			isa = PBXGroup;
+			children = (
+				4663F7EA2105BC2E00BEE115 /* Helper */,
+				F67EEDA74A60F99166CFF0E7 /* TIMModule.m */,
+				F67EE9EB2A04B0589475B4E5 /* TIMModule.h */,
+			);
+			path = RCTIM;
+			sourceTree = "<group>";
+		};
+		4663F7EA2105BC2E00BEE115 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F67EED250736F513B4E8D5E0 /* ConfigHelper.m */,
+				F67EE64CF628E17B9949F91C /* ConfigHelper.h */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		466BAAAD2101E148004F4392 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +725,7 @@
 				EACC398C330B4A6B95C30ECA /* libAuroraIMUI.a */,
 				53402EBB77774E2D8DE08E36 /* RCTAuroraIMUI.framework */,
 				AABFFF20403243D98D8F53E8 /* RCTAuroraIMUITests.xctest */,
+				F9E35939DEAC40DFA50ED740 /* libCodePush.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -706,6 +784,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				A065214CB05C4BD69FE022DC /* RNFS.xcodeproj */,
 				EEC6A8DD78674FBD972F2615 /* RCTAuroraIMUI.xcodeproj */,
+				588B730C57BF408282351EEB /* CodePush.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -783,10 +862,12 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				4663F7AB2105B8E500BEE115 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4663F7AD2105B90100BEE115 /* PBXTargetDependency */,
 			);
 			name = timAurora;
 			productName = "Hello World";
@@ -865,6 +946,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 4663F6CE2105854000BEE115 /* Products */;
+					ProjectRef = 588B730C57BF408282351EEB /* CodePush.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -1157,6 +1242,20 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		4663F6D32105854000BEE115 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 4663F6D22105854000BEE115 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4663F6D52105854000BEE115 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 4663F6D42105854000BEE115 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		466BAAD82101E14A004F4392 /* libRNFS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1309,6 +1408,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */,
+				F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,6 +1443,11 @@
 			target = 2D02E47A1E0B4A5D006451C7 /* timAurora-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
+		4663F7AD2105B90100BEE115 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTWebSocket;
+			targetProxy = 4663F7AC2105B90100BEE115 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1368,7 +1474,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = timAuroraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1377,6 +1484,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1396,7 +1504,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = timAuroraTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1405,6 +1514,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1419,6 +1529,7 @@
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -1430,7 +1541,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = timAurora/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1447,6 +1559,7 @@
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1457,7 +1570,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = timAurora/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1486,7 +1600,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = "timAurora-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1494,6 +1609,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1523,7 +1639,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = "timAurora-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1531,6 +1648,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1559,7 +1677,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = "timAurora-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1567,6 +1686,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1595,7 +1715,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-fs/**",
-					"$(SRCROOT)..\node_modules\aurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)..\node_modulesaurora-imui-react-nativeiOSIMUIMessageCollectionView/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = "timAurora-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1603,6 +1724,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
