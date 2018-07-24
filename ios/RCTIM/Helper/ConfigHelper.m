@@ -4,8 +4,7 @@
 //
 
 #import "ConfigHelper.h"
-#define sdkAppId       @"1400001533"
-#define sdkAccountType @"792"
+
 
 @implementation ConfigHelper {
 

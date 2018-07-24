@@ -5,6 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ImSDK/TIMManager.h>
+#import "Constant.h"
 
 @interface ConfigHelper : NSObject
 +(void)initSDK;

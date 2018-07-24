@@ -52,6 +52,6 @@ RCT_EXPORT_METHOD(loginTest10010:(RCTPromiseResolveBlock)resolve reject:(RCTProm
 }
 
 RCT_EXPORT_METHOD(loginTest10011:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject){
-    [AuthHelper login:@"test10011" userSig:@"eJx1kFFPgzAUhd-5FaSvMwIFVEx8qNop6tjcurm3htAWO3Dr4I5sMf53GzSRF*-r9*Wck-vpuK6L2MviPC*K3WELHE5GIvfaRZcJRmd-2BgteA48bESPg8i3F8RhOLDk0ehG8lyBbHoLxwm22kDRQm5BK-0rgGwhsDnBQGlFxfu*-4taXfZwQpd36XgpdjnQ2ofnR2-lsftVtvDL*sHgafcmYxXts*p2TkaVeiKaksN0RutkT9mFdyLvmHRpNvZY8Qojs1lHZTKp5t16tsmYSm8GlaA-fh5jp*AouLKTkPPlfANBYVbk" resolve:resolve  reject:reject];
+    [AuthHelper login:@"test10011" userSig:@"eJx1kE1PhDAQQO-8iqZnI-QDKSYecDG67mpWWCR4aRooWHcXsNS6xvjfJWgiF*f6XuZN5tMBAMDtOj0VZdm9tYabj15CcA5gEGJ48of7XlVcGE50NWFEvXGQT8jMksdeaclFbaSeLOyHeNRmiqpka1StfgUjB4PGPWimDNWOT73-Q4NqJnh3lS2WD7HdJ110bCLtZrdlOujAtlGa34h9v6ObIo9XOPDYWdHap-dlk9wXi01iTXxwV3Ww1V0hMoofry-X4TPJPfbiW-GKUpeU9GKWNOrw85jxFEwRY4RB58v5Bn4RVww_" resolve:resolve  reject:reject];
 }
 @end

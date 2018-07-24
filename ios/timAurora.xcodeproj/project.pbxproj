@@ -474,6 +474,7 @@
 		F67EE0F1A6E75A6B9ADF56D1 /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
 		F67EE63D7D2CBF4A1860EEE4 /* TIMGetMessageCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMGetMessageCb.h; sourceTree = "<group>"; };
 		F67EE64CF628E17B9949F91C /* ConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHelper.h; sourceTree = "<group>"; };
+		F67EE6562584E177FA4456B3 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		F67EE656FC753491BA021444 /* AuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHelper.h; sourceTree = "<group>"; };
 		F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthHelper.m; sourceTree = "<group>"; };
 		F67EE712C1A1401A4EB6289A /* ChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatHelper.h; sourceTree = "<group>"; };
@@ -756,6 +757,7 @@
 				4663F8182105D4EE00BEE115 /* Callback */,
 				F67EEDA74A60F99166CFF0E7 /* TIMModule.m */,
 				F67EE9EB2A04B0589475B4E5 /* TIMModule.h */,
+				F67EE6562584E177FA4456B3 /* Constant.h */,
 			);
 			path = RCTIM;
 			sourceTree = "<group>";

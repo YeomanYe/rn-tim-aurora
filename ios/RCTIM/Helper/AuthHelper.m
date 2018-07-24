@@ -13,6 +13,8 @@
     TIMLoginParam *param = [[TIMLoginParam alloc] init];
     [param setIdentifier:identifier];
     [param setUserSig:userSig];
+    [param setAccountType:sdkAccountType];
+    [param setAppidAt3rd:sdkAppId];
     [[TIMManager sharedInstance] login:param cb:[[TIMCb alloc] initWithName:@"login" resolve:resolve reject:reject]];
 }
 
