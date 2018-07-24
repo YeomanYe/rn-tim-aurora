@@ -6,6 +6,8 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTLog.h>
 #import "ConfigHelper.h"
+#import "AuthHelper.h"
+#import "ChatHelper.h"
 
 @interface TIMModule : NSObject<RCTBridgeModule>
 @end

@@ -6,7 +6,9 @@
 #import <Foundation/Foundation.h>
 #import <ImSDK/TIMManager.h>
 #import <React/RCTBridgeModule.h>
+#import "TIMCb.h"
 
 @interface AuthHelper : NSObject
 +(void)login:(NSString *)identifier userSig:(NSString *)user resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject;
++(void)logout:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject;
 @end

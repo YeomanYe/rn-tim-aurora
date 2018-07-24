@@ -36,6 +36,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* timAuroraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* timAuroraTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		30E00142D73C4D94A41DB99C /* libAuroraIMUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC398C330B4A6B95C30ECA /* libAuroraIMUI.a */; };
+		46625CF92106F5E600DD278F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46625CCD2106F5E500DD278F /* AVFoundation.framework */; };
 		4663F69021057A3000BEE115 /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68A21057A2F00BEE115 /* IMCore.framework */; };
 		4663F69121057A3000BEE115 /* QALHttpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68B21057A2F00BEE115 /* QALHttpSDK.framework */; };
 		4663F69221057A3000BEE115 /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4663F68C21057A3000BEE115 /* TLSSDK.framework */; };
@@ -64,8 +65,11 @@
 		F3233DF6E91C465296D1CC50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5626B624F78C4E6895140D2F /* SystemConfiguration.framework */; };
 		F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEDA74A60F99166CFF0E7 /* TIMModule.m */; };
 		F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EED250736F513B4E8D5E0 /* ConfigHelper.m */; };
-		F67EE59978CFE829CFBF9460 /* TIMCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE660EAD5ADF9C2DD22F8 /* TIMCb.m */; };
+		F67EE5885CD9E6CDC0182E0F /* TIMCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE2F691126D1B1486525D /* TIMCb.m */; };
+		F67EE91E8E41A60582B653DE /* BaseCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE1AC98032E9E3E3ED87C /* BaseCb.m */; };
+		F67EECC94B9E9CACDD06F9CD /* PromiseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEC31344F85C130A28725 /* PromiseUtil.m */; };
 		F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */; };
+		F67EEFFC763D2D5BCA51B3D0 /* ChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEB3ED77B8B635268A540 /* ChatHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +444,7 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3480D3B097AD4FA786F26D21 /* libRNFS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFS.a; sourceTree = "<group>"; };
 		3A1FA31B09884FB789E1AAD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		46625CCD2106F5E500DD278F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4663F68A21057A2F00BEE115 /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMCore.framework; path = frameworks/IMCore.framework; sourceTree = "<group>"; };
 		4663F68B21057A2F00BEE115 /* QALHttpSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QALHttpSDK.framework; path = frameworks/QALHttpSDK.framework; sourceTree = "<group>"; };
 		4663F68C21057A3000BEE115 /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TLSSDK.framework; path = frameworks/TLSSDK.framework; sourceTree = "<group>"; };
@@ -465,12 +470,18 @@
 		EACC398C330B4A6B95C30ECA /* libAuroraIMUI.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAuroraIMUI.a; sourceTree = "<group>"; };
 		EEC6A8DD78674FBD972F2615 /* RCTAuroraIMUI.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTAuroraIMUI.xcodeproj; path = "../node_modules/aurora-imui-react-native/ReactNative/ios/RCTAuroraIMUI.xcodeproj"; sourceTree = "<group>"; };
 		EFCFB18BB76843CC859E3791 /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F67EE1AC98032E9E3E3ED87C /* BaseCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCb.m; path = RCTIM/Callback/BaseCb.m; sourceTree = SOURCE_ROOT; };
+		F67EE2F691126D1B1486525D /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
 		F67EE64CF628E17B9949F91C /* ConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHelper.h; sourceTree = "<group>"; };
 		F67EE656FC753491BA021444 /* AuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHelper.h; sourceTree = "<group>"; };
-		F67EE660EAD5ADF9C2DD22F8 /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
-		F67EE6E67E72BC720042A4FB /* TIMCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMCb.h; sourceTree = "<group>"; };
 		F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthHelper.m; sourceTree = "<group>"; };
+		F67EE712C1A1401A4EB6289A /* ChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatHelper.h; sourceTree = "<group>"; };
+		F67EE9C2101A0BC703BE0F43 /* PromiseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromiseUtil.h; sourceTree = "<group>"; };
 		F67EE9EB2A04B0589475B4E5 /* TIMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMModule.h; sourceTree = "<group>"; };
+		F67EEB3ED77B8B635268A540 /* ChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatHelper.m; sourceTree = "<group>"; };
+		F67EEBD43A45B18631809F7D /* BaseCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCb.h; path = RCTIM/Callback/BaseCb.h; sourceTree = SOURCE_ROOT; };
+		F67EEC31344F85C130A28725 /* PromiseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromiseUtil.m; sourceTree = "<group>"; };
+		F67EECCDED05783DD63BE4B6 /* TIMCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMCb.h; sourceTree = "<group>"; };
 		F67EED250736F513B4E8D5E0 /* ConfigHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigHelper.m; sourceTree = "<group>"; };
 		F67EEDA74A60F99166CFF0E7 /* TIMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMModule.m; sourceTree = "<group>"; };
 		F9E35939DEAC40DFA50ED740 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
@@ -489,6 +500,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46625CF92106F5E600DD278F /* AVFoundation.framework in Frameworks */,
 				4663F69021057A3000BEE115 /* IMCore.framework in Frameworks */,
 				4663F69121057A3000BEE115 /* QALHttpSDK.framework in Frameworks */,
 				4663F69221057A3000BEE115 /* TLSSDK.framework in Frameworks */,
@@ -674,6 +686,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46625CCD2106F5E500DD278F /* AVFoundation.framework */,
 				4663F68A21057A2F00BEE115 /* IMCore.framework */,
 				4663F68D21057A3000BEE115 /* ImSDK.framework */,
 				4663F68F21057A3000BEE115 /* IMSDKBugly.framework */,
@@ -696,6 +709,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		46625C522106EAE500DD278F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F67EEC31344F85C130A28725 /* PromiseUtil.m */,
+				F67EE9C2101A0BC703BE0F43 /* PromiseUtil.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		46625C532106EB3800DD278F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F67EED250736F513B4E8D5E0 /* ConfigHelper.m */,
+				F67EE64CF628E17B9949F91C /* ConfigHelper.h */,
+				F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */,
+				F67EE656FC753491BA021444 /* AuthHelper.h */,
+				F67EEB3ED77B8B635268A540 /* ChatHelper.m */,
+				F67EE712C1A1401A4EB6289A /* ChatHelper.h */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		46625C542106EBAB00DD278F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F67EEBD43A45B18631809F7D /* BaseCb.h */,
+				F67EE1AC98032E9E3E3ED87C /* BaseCb.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		4663F6CE2105854000BEE115 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,30 +752,21 @@
 		4663F7E92105BC0700BEE115 /* RCTIM */ = {
 			isa = PBXGroup;
 			children = (
+				46625C542106EBAB00DD278F /* Base */,
+				46625C532106EB3800DD278F /* Helper */,
+				46625C522106EAE500DD278F /* Util */,
 				4663F8182105D4EE00BEE115 /* Callback */,
-				4663F7EA2105BC2E00BEE115 /* Helper */,
 				F67EEDA74A60F99166CFF0E7 /* TIMModule.m */,
 				F67EE9EB2A04B0589475B4E5 /* TIMModule.h */,
 			);
 			path = RCTIM;
 			sourceTree = "<group>";
 		};
-		4663F7EA2105BC2E00BEE115 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				F67EED250736F513B4E8D5E0 /* ConfigHelper.m */,
-				F67EE64CF628E17B9949F91C /* ConfigHelper.h */,
-				F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */,
-				F67EE656FC753491BA021444 /* AuthHelper.h */,
-			);
-			name = Helper;
-			sourceTree = "<group>";
-		};
 		4663F8182105D4EE00BEE115 /* Callback */ = {
 			isa = PBXGroup;
 			children = (
-				F67EE660EAD5ADF9C2DD22F8 /* TIMCb.m */,
-				F67EE6E67E72BC720042A4FB /* TIMCb.h */,
+				F67EE2F691126D1B1486525D /* TIMCb.m */,
+				F67EECCDED05783DD63BE4B6 /* TIMCb.h */,
 			);
 			path = Callback;
 			sourceTree = "<group>";
@@ -1429,7 +1464,10 @@
 				F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */,
 				F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */,
 				F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */,
-				F67EE59978CFE829CFBF9460 /* TIMCb.m in Sources */,
+				F67EECC94B9E9CACDD06F9CD /* PromiseUtil.m in Sources */,
+				F67EE91E8E41A60582B653DE /* BaseCb.m in Sources */,
+				F67EE5885CD9E6CDC0182E0F /* TIMCb.m in Sources */,
+				F67EEFFC763D2D5BCA51B3D0 /* ChatHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
