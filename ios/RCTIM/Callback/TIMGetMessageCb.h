@@ -1,14 +1,14 @@
 //
-// Created by 美德远健 on 2018/7/23.
+// Created by 美德远健 on 2018/7/24.
 // Copyright (c) 2018 Facebook. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <ImSDK/TIMManager.h>
+#import <ImSDK/ImSDK.h>
 #import <React/RCTBridgeModule.h>
-#import "PromiseUtil.h"
 
-@interface BaseCb : NSObject<TIMCallback>{
+
+@interface TIMGetMessageCb : NSObject<TIMGetMessageCallback>{
     NSString *_tagName;
     RCTPromiseResolveBlock _resolve;
     RCTPromiseRejectBlock _reject;

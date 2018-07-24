@@ -7,6 +7,7 @@
 
 
 static TIMConversation *conversation;
+extern TIMMessage *lastHistoryMsg;
 @implementation ChatHelper {
 
 }
@@ -100,6 +101,10 @@ static TIMConversation *conversation;
     snapshot.width = scaledImage.size.width;
     snapshot.height = scaledImage.size.height;
     [ChatHelper sendMsg:elem tagName:@"sendVideo" resolve:resolve reject:reject];
+}
+
++ (void)getHistoryMsg:(NSInteger)count resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
+    [conversation getMessage:count last:lastHistoryMsg cb:[[TIMGetMessageCb alloc] initWithName:@"getHistoryMsg" resolve:resolve reject:reject]];
 }
 
 

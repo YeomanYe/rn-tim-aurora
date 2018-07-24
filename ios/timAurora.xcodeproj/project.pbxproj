@@ -65,9 +65,9 @@
 		F3233DF6E91C465296D1CC50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5626B624F78C4E6895140D2F /* SystemConfiguration.framework */; };
 		F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEDA74A60F99166CFF0E7 /* TIMModule.m */; };
 		F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EED250736F513B4E8D5E0 /* ConfigHelper.m */; };
-		F67EE5885CD9E6CDC0182E0F /* TIMCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE2F691126D1B1486525D /* TIMCb.m */; };
-		F67EE91E8E41A60582B653DE /* BaseCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE1AC98032E9E3E3ED87C /* BaseCb.m */; };
+		F67EECAD9A7179DD1D2382CF /* TIMCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE0F1A6E75A6B9ADF56D1 /* TIMCb.m */; };
 		F67EECC94B9E9CACDD06F9CD /* PromiseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEC31344F85C130A28725 /* PromiseUtil.m */; };
+		F67EEED503D82B9213910F60 /* TIMGetMessageCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE00415B8AA46322DFDF7 /* TIMGetMessageCb.m */; };
 		F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */; };
 		F67EEFFC763D2D5BCA51B3D0 /* ChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEB3ED77B8B635268A540 /* ChatHelper.m */; };
 /* End PBXBuildFile section */
@@ -470,8 +470,9 @@
 		EACC398C330B4A6B95C30ECA /* libAuroraIMUI.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAuroraIMUI.a; sourceTree = "<group>"; };
 		EEC6A8DD78674FBD972F2615 /* RCTAuroraIMUI.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTAuroraIMUI.xcodeproj; path = "../node_modules/aurora-imui-react-native/ReactNative/ios/RCTAuroraIMUI.xcodeproj"; sourceTree = "<group>"; };
 		EFCFB18BB76843CC859E3791 /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		F67EE1AC98032E9E3E3ED87C /* BaseCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCb.m; path = RCTIM/Callback/BaseCb.m; sourceTree = SOURCE_ROOT; };
-		F67EE2F691126D1B1486525D /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
+		F67EE00415B8AA46322DFDF7 /* TIMGetMessageCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMGetMessageCb.m; sourceTree = "<group>"; };
+		F67EE0F1A6E75A6B9ADF56D1 /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
+		F67EE63D7D2CBF4A1860EEE4 /* TIMGetMessageCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMGetMessageCb.h; sourceTree = "<group>"; };
 		F67EE64CF628E17B9949F91C /* ConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHelper.h; sourceTree = "<group>"; };
 		F67EE656FC753491BA021444 /* AuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHelper.h; sourceTree = "<group>"; };
 		F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthHelper.m; sourceTree = "<group>"; };
@@ -479,11 +480,10 @@
 		F67EE9C2101A0BC703BE0F43 /* PromiseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromiseUtil.h; sourceTree = "<group>"; };
 		F67EE9EB2A04B0589475B4E5 /* TIMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMModule.h; sourceTree = "<group>"; };
 		F67EEB3ED77B8B635268A540 /* ChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatHelper.m; sourceTree = "<group>"; };
-		F67EEBD43A45B18631809F7D /* BaseCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCb.h; path = RCTIM/Callback/BaseCb.h; sourceTree = SOURCE_ROOT; };
 		F67EEC31344F85C130A28725 /* PromiseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromiseUtil.m; sourceTree = "<group>"; };
-		F67EECCDED05783DD63BE4B6 /* TIMCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMCb.h; sourceTree = "<group>"; };
 		F67EED250736F513B4E8D5E0 /* ConfigHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigHelper.m; sourceTree = "<group>"; };
 		F67EEDA74A60F99166CFF0E7 /* TIMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMModule.m; sourceTree = "<group>"; };
+		F67EEF0AE050099B1B249E1E /* TIMCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMCb.h; sourceTree = "<group>"; };
 		F9E35939DEAC40DFA50ED740 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -734,8 +734,6 @@
 		46625C542106EBAB00DD278F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F67EEBD43A45B18631809F7D /* BaseCb.h */,
-				F67EE1AC98032E9E3E3ED87C /* BaseCb.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -765,8 +763,10 @@
 		4663F8182105D4EE00BEE115 /* Callback */ = {
 			isa = PBXGroup;
 			children = (
-				F67EE2F691126D1B1486525D /* TIMCb.m */,
-				F67EECCDED05783DD63BE4B6 /* TIMCb.h */,
+				F67EEF0AE050099B1B249E1E /* TIMCb.h */,
+				F67EE0F1A6E75A6B9ADF56D1 /* TIMCb.m */,
+				F67EE00415B8AA46322DFDF7 /* TIMGetMessageCb.m */,
+				F67EE63D7D2CBF4A1860EEE4 /* TIMGetMessageCb.h */,
 			);
 			path = Callback;
 			sourceTree = "<group>";
@@ -1465,9 +1465,9 @@
 				F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */,
 				F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */,
 				F67EECC94B9E9CACDD06F9CD /* PromiseUtil.m in Sources */,
-				F67EE91E8E41A60582B653DE /* BaseCb.m in Sources */,
-				F67EE5885CD9E6CDC0182E0F /* TIMCb.m in Sources */,
 				F67EEFFC763D2D5BCA51B3D0 /* ChatHelper.m in Sources */,
+				F67EECAD9A7179DD1D2382CF /* TIMCb.m in Sources */,
+				F67EEED503D82B9213910F60 /* TIMGetMessageCb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
