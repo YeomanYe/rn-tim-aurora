@@ -9,7 +9,9 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.tencent.bugly.imsdk.crashreport.CrashReport;
 import com.timaurora.tim.TIMPackage;
+import com.timaurora.tls.TLSPackage;
 
 import cn.jiguang.imui.messagelist.ReactIMUIPackage;
 
@@ -30,7 +32,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSBundleFile() {
         return CodePush.getJSBundleFile();
         }
-    
+
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -41,8 +43,9 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new CodePush("TDqNKqfyzx1gvJOewdU7SoVqRNw24ksvOXqog", getApplicationContext(), BuildConfig.DEBUG,"http://192.168.0.230:3000/"),
-              new ReactIMUIPackage(),
+            new ReactIMUIPackage(),
             new TIMPackage(),
+            new TLSPackage(),
             new RNFSPackage()
       );
     }

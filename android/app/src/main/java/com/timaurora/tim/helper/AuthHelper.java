@@ -18,3 +18,4 @@ public class AuthHelper {
         TIMManager.getInstance().logout(new TIMCb("logout",promise));
     }
 }
+
