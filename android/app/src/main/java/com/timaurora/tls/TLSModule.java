@@ -15,7 +15,7 @@ public class TLSModule extends ReactContextBaseJavaModule{
         this.context = context;
     }
     @ReactMethod
-    public void init(){
+    public void initTLS(){
         AuthHelper.init(context);
     }
     @ReactMethod

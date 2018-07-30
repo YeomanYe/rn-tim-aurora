@@ -29,7 +29,7 @@ public class AuthHelper {
             promise.reject(PromiseHelper.createErrReject("username or pass is incorrect format"));
     }
     public static void login(String username,String pass,Promise promise){
-        tlsHelper.TLSPwdLogin("用户帐号", "用户密码".getBytes(), new PwdLoginCb("login",promise));
+        tlsHelper.TLSPwdLogin(username, pass.getBytes(), new PwdLoginCb("login",promise));
 
     }
     public static void verifyImgCode(String code,Promise promise){
