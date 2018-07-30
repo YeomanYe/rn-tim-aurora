@@ -65,9 +65,13 @@
 		F3233DF6E91C465296D1CC50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5626B624F78C4E6895140D2F /* SystemConfiguration.framework */; };
 		F67EE1170B1F36E61BAD8D1B /* TIMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEDA74A60F99166CFF0E7 /* TIMModule.m */; };
 		F67EE41B86D09BB54BD19429 /* ConfigHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EED250736F513B4E8D5E0 /* ConfigHelper.m */; };
+		F67EE5734001A652733BF0DE /* TLSModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EED5192964745316DDF9C /* TLSModule.m */; };
+		F67EEAB0B588ECC7EC0D21C4 /* TLSAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE25324F8AA08C0A0CA33 /* TLSAuthHelper.m */; };
+		F67EEC2A029F8FB4238A72B3 /* PwdLoginCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEB3AD80C52DB44F18E92 /* PwdLoginCb.m */; };
 		F67EECAD9A7179DD1D2382CF /* TIMCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE0F1A6E75A6B9ADF56D1 /* TIMCb.m */; };
 		F67EECC94B9E9CACDD06F9CD /* PromiseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEC31344F85C130A28725 /* PromiseUtil.m */; };
 		F67EEED503D82B9213910F60 /* TIMGetMessageCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE00415B8AA46322DFDF7 /* TIMGetMessageCb.m */; };
+		F67EEF41E46DE02AC28A869E /* StrAccountRegCb.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEB2E1A1BD4A0280A9275 /* StrAccountRegCb.m */; };
 		F67EEFCD1182AB7C6DE96EF0 /* AuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */; };
 		F67EEFFC763D2D5BCA51B3D0 /* ChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F67EEB3ED77B8B635268A540 /* ChatHelper.m */; };
 /* End PBXBuildFile section */
@@ -472,18 +476,26 @@
 		EFCFB18BB76843CC859E3791 /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F67EE00415B8AA46322DFDF7 /* TIMGetMessageCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMGetMessageCb.m; sourceTree = "<group>"; };
 		F67EE0F1A6E75A6B9ADF56D1 /* TIMCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMCb.m; sourceTree = "<group>"; };
+		F67EE25324F8AA08C0A0CA33 /* TLSAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSAuthHelper.m; sourceTree = "<group>"; };
 		F67EE63D7D2CBF4A1860EEE4 /* TIMGetMessageCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMGetMessageCb.h; sourceTree = "<group>"; };
 		F67EE64CF628E17B9949F91C /* ConfigHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHelper.h; sourceTree = "<group>"; };
 		F67EE6562584E177FA4456B3 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		F67EE656FC753491BA021444 /* AuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthHelper.h; sourceTree = "<group>"; };
 		F67EE6EF82F66AD09ECA51AC /* AuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthHelper.m; sourceTree = "<group>"; };
 		F67EE712C1A1401A4EB6289A /* ChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatHelper.h; sourceTree = "<group>"; };
+		F67EE7D8E57F268FC7D4777E /* PwdLoginCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PwdLoginCb.h; sourceTree = "<group>"; };
 		F67EE9C2101A0BC703BE0F43 /* PromiseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromiseUtil.h; sourceTree = "<group>"; };
 		F67EE9EB2A04B0589475B4E5 /* TIMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMModule.h; sourceTree = "<group>"; };
+		F67EEB2E1A1BD4A0280A9275 /* StrAccountRegCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrAccountRegCb.m; sourceTree = "<group>"; };
+		F67EEB3AD80C52DB44F18E92 /* PwdLoginCb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PwdLoginCb.m; sourceTree = "<group>"; };
 		F67EEB3ED77B8B635268A540 /* ChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatHelper.m; sourceTree = "<group>"; };
 		F67EEC31344F85C130A28725 /* PromiseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromiseUtil.m; sourceTree = "<group>"; };
+		F67EEC412748D0195393D5B7 /* StrAccountRegCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrAccountRegCb.h; sourceTree = "<group>"; };
 		F67EED250736F513B4E8D5E0 /* ConfigHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigHelper.m; sourceTree = "<group>"; };
+		F67EED5192964745316DDF9C /* TLSModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSModule.m; sourceTree = "<group>"; };
 		F67EEDA74A60F99166CFF0E7 /* TIMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMModule.m; sourceTree = "<group>"; };
+		F67EEDBCFD3905D4F00047C2 /* TLSModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSModule.h; sourceTree = "<group>"; };
+		F67EEE8779E5F6774EDD5D8D /* TLSAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSAuthHelper.h; sourceTree = "<group>"; };
 		F67EEF0AE050099B1B249E1E /* TIMCb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMCb.h; sourceTree = "<group>"; };
 		F9E35939DEAC40DFA50ED740 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -649,6 +661,7 @@
 		13B07FAE1A68108700A75B9A /* timAurora */ = {
 			isa = PBXGroup;
 			children = (
+				46DA01E5210EDCE800ABEE92 /* RCTLS */,
 				4663F7E92105BC0700BEE115 /* RCTIM */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -802,6 +815,37 @@
 				466BAAE52101E14A004F4392 /* RCTAuroraIMUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		46DA01E5210EDCE800ABEE92 /* RCTLS */ = {
+			isa = PBXGroup;
+			children = (
+				46DA024C210EE02F00ABEE92 /* Callback */,
+				46DA0220210EE01D00ABEE92 /* Helper */,
+				F67EED5192964745316DDF9C /* TLSModule.m */,
+				F67EEDBCFD3905D4F00047C2 /* TLSModule.h */,
+			);
+			path = RCTLS;
+			sourceTree = "<group>";
+		};
+		46DA0220210EE01D00ABEE92 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F67EEE8779E5F6774EDD5D8D /* TLSAuthHelper.h */,
+				F67EE25324F8AA08C0A0CA33 /* TLSAuthHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		46DA024C210EE02F00ABEE92 /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				F67EEB2E1A1BD4A0280A9275 /* StrAccountRegCb.m */,
+				F67EEC412748D0195393D5B7 /* StrAccountRegCb.h */,
+				F67EEB3AD80C52DB44F18E92 /* PwdLoginCb.m */,
+				F67EE7D8E57F268FC7D4777E /* PwdLoginCb.h */,
+			);
+			path = Callback;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -1470,6 +1514,10 @@
 				F67EEFFC763D2D5BCA51B3D0 /* ChatHelper.m in Sources */,
 				F67EECAD9A7179DD1D2382CF /* TIMCb.m in Sources */,
 				F67EEED503D82B9213910F60 /* TIMGetMessageCb.m in Sources */,
+				F67EE5734001A652733BF0DE /* TLSModule.m in Sources */,
+				F67EEF41E46DE02AC28A869E /* StrAccountRegCb.m in Sources */,
+				F67EEC2A029F8FB4238A72B3 /* PwdLoginCb.m in Sources */,
+				F67EEAB0B588ECC7EC0D21C4 /* TLSAuthHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <ImSDK/ImSDK.h>
 #import <React/RCTBridgeModule.h>
+#import "PromiseUtil.h"
 
 
 @interface TIMGetMessageCb : NSObject<TIMGetMessageCallback>{

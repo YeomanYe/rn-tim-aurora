@@ -17,7 +17,14 @@
 }
 
 + (NSDictionary *)createSuccResolve:(NSString *)msg {
+    NSLog(msg);
     return [PromiseUtil createResolve:200 msg:msg];
+}
+
++ (void)rejectWithMsg:(RCTPromiseRejectBlock)reject msg:(NSString *)msg {
+    NSLog(msg);
+    NSError *error = [[NSError alloc] initWithDomain:msg code:500 userInfo:nil];
+    reject(@"500",msg,error);
 }
 
 

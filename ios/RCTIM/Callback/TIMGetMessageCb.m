@@ -76,9 +76,7 @@ TIMMessage *lastHistoryMsg;
  */
 - (void)onErr:(int)errCode errMsg:(NSString *)errMsg {
     NSString *msg = [[NSString alloc] initWithFormat:@"%@ Failed: code=%d, err=%@", self.tagName,errCode, errMsg];
-    NSLog(msg);
-    NSError *error = [[NSError alloc] initWithDomain:msg code:500 userInfo:nil];
-    self.reject(@"500",msg,error);
+    [PromiseUtil rejectWithMsg:self.reject msg:msg];
 }
 -(instancetype)initWithName:(NSString *)name resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
     self.tagName = name;
